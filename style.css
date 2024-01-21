@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+  --Color-purple: #312D64;
+  --Color-pink: #B52184;
+  --Color-white: #FFFFFF;
+  --Color-white-300: #F9F4FB;
+  --Color-Linear-Gradient: linear-gradient(96deg, #343193 0%, #302C63 99.68%);
+}
+
+html, body, input, textarea {
+  font-family: 'Mulish', sans-serif;
+}
+
+body {
+  font-size: 1.6rem; 
+  background-color: var(--Color-white-300);
+}
+
+#app {
+  display: grid;
+  grid-template-rows: max-content max-content max-content 1fr;
+  height: 100vh;
+}
+
+
+header {
+  margin: 0 auto 9.3rem;
+  padding: 0 3.2rem;
+  width: min(144rem, 100%);
+  
+}
+
+#img-astro {
+  margin-bottom: 1.7rem;
+}
+
+h1 {
+  color: var(--Color-pink);
+  font-weight: 900;
+  line-height: normal;
+  
+}
+
+header h1 {
+  font-size: 3.2rem;
+  text-align: center;
+}
+
+p {
+  color: var(--Color-purple);
+  font-weight: 600;
+  line-height: normal;  
+}
+
+header p {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+#icon {
+  margin: auto;
+  width: 5.8rem;
+  height: 10.5rem;
+  text-align: center;
+
+  display: flex;
+}
+
+section {
+  background: var(--Color-Linear-Gradient);
+  width: 100%;  
+}
+
+aside {
+  margin: 0 auto;
+  padding: 5.3rem 3.9rem;
+  width: min(144rem, 100%);
+
+  display: flex;
+  flex-direction: column;
+  gap: 4.9rem;
+}
+
+.card {
+  background-color: var(--Color-white);
+  padding: 2.65rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  border-radius: 2rem;
+}
+
+.card img {
+  width: 8rem;
+  height: 8rem;
+  margin-bottom: 3.3rem;
+}
+
+.card h1 {
+  font-size: 2.9rem;
+  margin-bottom: 1.9rem;
+}
+
+.card p {
+  font-size: 1.6rem;
+}
+
+main {
+  margin: 0 auto;
+  width: min(144rem, 100%);
+}
+
+.content {
+  width: 100%;
+  padding: 7.8rem 4rem;
+}
+
+.content h1 {
+  margin-bottom: 4.3rem;
+}
+
+.input-wrapper {
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 2.4rem;
+
+  border: .15rem solid var(--Color-purple);
+  border-radius: 1.6rem;
+  background: var(--Color-white-300);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.input-wrapper label {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.input-wrapper input,
+.input-wrapper textarea {
+  width: 100%;
+  border: 0;
+  background: var(--Color-white-300);
+}
+
+.input-wrapper textarea {
+  height: 12.6rem;
+}
+
+.input-wrapper input::placeholder {
+  color: var(--Color-purple);
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+.input-wrapper textarea::placeholder {
+  color: var(--Color-purple);
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.button {
+  background: var(--Color-Linear-Gradient);
+  color: var(--Color-white);
+  padding: 1.6rem;
+  border: 0;
+  border-radius: 1.6rem;
+
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--Color-pink);
+}
+
+footer {
+  background: var(--Color-Linear-Gradient);
+  width: 100%;
+  padding: 1.6rem;
+}
+
+footer p {
+  color: var(--Color-white);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: normal;
+}
+
+@media(min-width: 700px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    gap: 2.8rem;
+  }
+
+  .content-info h1,
+  .content-info p {
+    text-align: start;
+  }
+
+  .content-info p {
+    font-size: 3.2rem;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 17.9rem;
+  }
+
+  #icon {
+    margin: 0;
+  }
+
+  .content-info h1 {
+    font-size: 5.8rem;
+    margin-top: 31.2rem;
+
+  }
+
+  aside {  
+    display: flex;
+    flex-direction: row;
+    gap: 6rem;
+  }
+
+  main {  
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 9.2rem;
+  }
+
+  #image-star {
+    width: 64.4rem;
+    height: 61.1rem;
+    background: url(./assets/stars.png), lightgray 50% / cover no-repeat;
+  }
+
+}
